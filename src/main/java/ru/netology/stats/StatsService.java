@@ -24,13 +24,13 @@ public class StatsService {
     }
 
     public int minSalesMonthIndex(int[] sales) {
-        int currentMix = 0;
+        int currentMin = 0;
         for (int i = 1; i < sales.length; i++) {
-            if (sales[i] <= sales[currentMix]) {
-                currentMix = i;
+            if (sales[i] <= sales[currentMin]) {
+                currentMin = i;
             }
         }
-        return currentMix;
+        return currentMin;
     }
 
     public int belowAverageSalesMonthCount(int[] sales) {
